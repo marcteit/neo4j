@@ -1,3 +1,6 @@
 FROM neo4j:enterprise
 
-ADD neo4j.conf /var/lib/neo4j/conf/
+ADD set-config.sh /var/lib/neo4j/
+RUN chmod +x /var/lib/neo4j/set-config.sh
+
+CMD ["./set-config.sh"]

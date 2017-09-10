@@ -9,6 +9,9 @@ services:
       - 7474
       - 7687
       - 7473
+    environment:
+      expected_core_cluster_size: 3
+      initial_discovery_members: neo4j_1:5000,neo4j_2:5000,neo4j_3:5000
 
   neo4j_2:
     image: my-neo4j
@@ -17,6 +20,9 @@ services:
       - 7474
       - 7687
       - 7473
+    environment:
+      expected_core_cluster_size: 3
+      initial_discovery_members: neo4j_1:5000,neo4j_2:5000,neo4j_3:5000
 
   neo4j_3:
     image: my-neo4j
@@ -25,6 +31,9 @@ services:
       - 7474
       - 7687
       - 7473
+    environment:
+      expected_core_cluster_size: 3
+      initial_discovery_members: neo4j_1:5000,neo4j_2:5000,neo4j_3:5000
 
   neo4j_extra:
     image: my-neo4j
@@ -32,3 +41,6 @@ services:
       - 7474
       - 7687
       - 7473
+    environment:
+      expected_core_cluster_size: 3
+      initial_discovery_members: neo4j_1:5000,neo4j_2:5000,neo4j_3:5000
