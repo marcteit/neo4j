@@ -17,3 +17,8 @@ docker-compose -f docker-compose.yml scale neo4j_extra=3
 ```
 docker-compose -f docker-compose.yml down
 ```
+
+## Backup
+```
+./bin/neo4j-admin backup --backup-dir=<backup dir> --name=<backup name>
+```
